@@ -9,4 +9,13 @@
             stream0.Position = 0;
             return stream-;
         }
+        
+        public String GetInstalledFolder()
+        {
+            var process         = Process.GetCurrentProcess();
+            string fullPath     = process.MainModule.FileName;
+            FileInfo fileInfo   = new FileInfo(fullPath);
+
+            return fileInfo.DirectoryName;
+        }
     }
