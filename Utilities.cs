@@ -1,3 +1,9 @@
+    using Newtonsoft.Json;
+    using System;
+    using System.IO;
+    using System.Runtime.Serialization;
+    using System.Runtime.Serialization.Formatters.Binary;
+
     public class Utility
     {
         public static Stream GenerateStreamFromStr(string s)
